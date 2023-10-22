@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://github.com/hakylepremier/room-homepage-frontend)
-- Live Site URL: [Add live site URL here](https://effortless-puppy-3b6256.netlify.app/)
+- Live Site URL: [Add live site URL here](https://room-homepage-haky.netlify.app/)
 
 ## My process
 
