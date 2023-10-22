@@ -1,0 +1,32 @@
+/** @format */
+
+.furniture__nav {
+	position: relative;
+}
+
+.furniture-image {
+	display: inline-block;
+	width: 84rem;
+	// height: 53.4rem;
+	height: calc(53.4 / 80 * 100%);
+	height: calc(53.4 / 80 * 100vh);
+	height: calc(53.4 / 80 * 100dvh);
+
+	@include respond-to("medium") {
+		width: 100%;
+	}
+
+	@include respond-to("small") {
+		height: 30rem;
+	}
+}
+
+.furniture-image__media {
+}
+
+.furniture-image__media--image {
+	@extend %cover;
+
+	object-fit: cover;
+	z-index: z("furniture");
+}

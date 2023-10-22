@@ -1,0 +1,20 @@
+/** @format */
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+	position: fixed;
+	bottom: 1rem;
+	width: 100%;
+	text-align: center;
+	color: tint($color-quintenary, 40%);
+
+	@include respond-to("medium") {
+		font-size: 11px;
+		position: relative;
+		bottom: 15px;
+	}
+}
+.attribution__link {
+	color: $color-secondary;
+}

@@ -1,0 +1,11 @@
+/** @format */
+
+.about {
+	display: flex;
+	width: 100%;
+	position: relative;
+
+	@include respond-to("medium") {
+		flex-direction: column;
+	}
+}

@@ -1,0 +1,53 @@
+/** @format */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+// pageSize is mostly the size of the mockup page of the design file. eg.1920
+html {
+	font-size: calc(100vw / 1440 * 10);
+
+	@include respond-to("medium") {
+		font-size: 12px;
+	}
+}
+// "build": "webpack --mode production",
+
+a {
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+	display: inline-block;
+}
+
+img {
+	vertical-align: middle;
+}
+
+body {
+	@extend %para-12;
+	position: relative;
+	height: 100%;
+	height: 100vh;
+	height: 100dvh;
+
+	@include respond-to("medium") {
+		height: auto;
+	}
+}
+
+// THIS IS AN EXAMPLE I ADDED SO I CAN KNOW HOW TO PROPERLY COMMENT MY CSS
+/**
+ * Helper class to truncate and add ellipsis to a string too long for it to fit
+ * on a single line.
+ * 1. Prevent content from wrapping, forcing it on a single line.
+ * 2. Add ellipsis at the end of the line.
+ */
+// .ellipsis {
+//   white-space: nowrap; /* 1 */
+//   text-overflow: ellipsis; /* 2 */
+//   overflow: hidden;
+// }

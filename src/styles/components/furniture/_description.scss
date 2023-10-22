@@ -1,0 +1,39 @@
+/** @format */
+
+.furniture-info {
+	padding: 12rem 10rem;
+	padding-right: 8rem;
+	// @extend %center;
+	flex-direction: column;
+
+	@include respond-to("medium") {
+		padding: 4rem;
+	}
+
+	@include respond-to("small") {
+		padding: 2.5rem;
+		padding-top: 4.9rem;
+	}
+}
+
+.furniture-info__title {
+	@extend %title-42;
+
+	@include respond-to("small") {
+		font-size: 36px;
+	}
+}
+
+.furniture-info__description {
+	color: $color-tertiary;
+	max-width: 40.2rem;
+	font-size: 1.53rem;
+	padding: 2.1rem 0;
+	line-height: 1.4;
+
+	@include respond-to("small") {
+		padding: 0.8rem 0;
+		font-size: 16px;
+		padding-bottom: 1rem;
+	}
+}

@@ -1,0 +1,25 @@
+/** @format */
+
+.logo__wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.logo {
+	width: 6.2rem;
+	height: 1.4rem;
+}
+
+.menu__open {
+	position: absolute;
+	display: none;
+
+	@include respond-to("small") {
+		display: inline-block;
+		top: 4;
+		left: -24px;
+	}
+}

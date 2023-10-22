@@ -1,0 +1,65 @@
+block variables
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    base(href="/")
+    meta(name="description", content="This is a boilerplate page for pug and scss based project")
+
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap" rel="stylesheet")
+
+    link(rel="stylesheet", href=require('../styles/index.scss'))
+    title Frontend Mentor | Room homepage
+
+  body 
+    main.home
+      section.furniture
+
+        nav.navigation
+          .logo__wrapper
+            img.menu__open(src=require('../images/icon-hamburger.svg'), alt="Menu Open icon")
+            img.logo(src=require('../images/logo.svg'), alt="Logo of the website")
+          .navigation__links
+            img.menu__close(src=require('../images/icon-close.svg'), alt="Menu Open icon")
+            ul.navigation__links--wrapper
+              each val, index in ['Home', 'Shop', 'About', 'Contact']
+                li.navigation__link--item
+                  a.navigation__link(href="#")=val 
+                  span.line
+
+        - var images = [require("../images/desktop-image-hero-1.jpg"),require("../images/desktop-image-hero-2.jpg"),require("../images/desktop-image-hero-3.jpg"),]
+        // each img in images
+        section.furniture__nav 
+          picture.furniture-image
+            source.furniture-image__media--image.furniture-image__media--image--small(media="(max-width: 550px)", srcset=require('../images/mobile-image-hero-1.jpg'))
+            img.furniture-image__media--image.furniture-image__media--image--big(src=require("../images/desktop-image-hero-1.jpg"), alt="Image of furniture")
+          nav.button__change 
+            .button__change--left 
+              img.button__change--left-image(src=require('../images/icon-angle-left.svg'), alt="Image of a left icon")
+            .button__change--right
+              img.button__change--right-image(src=require('../images/icon-angle-right.svg'), alt="Image of a right icon")
+
+        section.furniture-info 
+          h1.furniture-info__title Discover innovative ways to decorate
+          p.furniture-info__description We provide unmatched quality, comfort, and style for property owners across the country. Our experts combine form and function in bringing your vision to life. Create a room in your own style with our collection and make your property a reflection of you and what you love.
+          a.button__shop(href="") Shop now #[img(src=require('../images/icon-arrow.svg'), alt="alt")]
+
+      section.about 
+        figure.about__media
+          img.about__media--image(src=require('../images/image-about-dark.jpg'), alt="About image dark")
+
+        article.about-info 
+          h2.about-info__heading About Our Furniture 
+          p.about-info__description Our multifunctional collection blends design and function to suit your individual taste. Make each room unique, or pick a cohesive theme that best express your interests and what inspires you. Find the furniture pieces you need, from traditional to contemporary styles or anything in between. Product specialists are available to help you create your dream space.
+
+        figure.about__media.about__media-2
+          img.about__media--image(src=require('../images/image-about-light.jpg'), alt="About image light")
+
+      .attribution Challenge by #[a.attribution__link(href="https://www.frontendmentor.io?ref=challenge" target=_blank rel=noopener) Frontend Mentor.] Coded by #[a.attribution__link(href="https://www.humphreyyeboah.com") Humphrey Yeboah].
+
+    script(src=require('../js/index.js')) 
+    

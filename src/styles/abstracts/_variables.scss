@@ -1,0 +1,22 @@
+/** @format */
+
+$color-primary: #fff;
+$color-secondary: hsl(0, 0%, 0%);
+$color-tertiary: hsl(0, 0%, 63%);
+$color-quintenary: hsl(0, 0%, 27%);
+
+$font-poppins: "Poppins";
+
+$z-indexes: ("navigation", "button", "furniture");
+
+$breakpoints: (
+	"small": (
+		max-width: 550px,
+	),
+	"medium": (
+		max-width: 900px,
+	),
+	"large": (
+		max-width: 1440px,
+	),
+);
